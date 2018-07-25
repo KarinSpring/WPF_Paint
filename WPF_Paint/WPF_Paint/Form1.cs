@@ -18,22 +18,6 @@ namespace WPF_Paint
             InitializeComponent();
         }
 
-        //used in Speichern (Default) and Schliessen (Default save)
-        public void SavingMethod()
-        {
-            string fileName = string.Format("{0}.txt", DateTime.Now.ToString("yyyyMMddhhmm"));
-            string Path = @"C:\Users\karin.spring\source\repos\WPF_Paint\testfiles\" + fileName;
-
-            using (StreamWriter sw = new StreamWriter(Path))
-            {
-                sw.WriteLine("Testfile");
-            }
-            MessageBox.Show("Bild wurde in " + Path + " gespeichert.");
-            this.Close();
-        }
-
-
-
         private void SpeichernSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Save File in a default folder (Show in MessageBox)
@@ -66,6 +50,22 @@ namespace WPF_Paint
                 SavingMethod();
             }
 
+        }
+
+        //Ausgelagerte Methoden
+
+        //used in Speichern (Default) and Schliessen (Default save)
+        public void SavingMethod()
+        {
+            string fileName = string.Format("{0}.txt", DateTime.Now.ToString("yyyyMMddhhmm"));
+            string Path = @"C:\Users\karin.spring\source\repos\WPF_Paint\testfiles\" + fileName;
+
+            using (StreamWriter sw = new StreamWriter(Path))
+            {
+                sw.WriteLine("Testfile");
+            }
+            MessageBox.Show("Bild wurde in " + Path + " gespeichert.");
+            this.Close();
         }
     }
 }
