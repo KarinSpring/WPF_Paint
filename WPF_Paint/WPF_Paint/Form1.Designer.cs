@@ -30,21 +30,19 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speichernSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.speichernAlsAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.öffnenOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schliessenXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.speichernAlsAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vulcanoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aquariumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.forestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.normalwhiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blindPandaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helloKittyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +69,34 @@
             this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
             // 
+            // speichernSToolStripMenuItem
+            // 
+            this.speichernSToolStripMenuItem.Name = "speichernSToolStripMenuItem";
+            this.speichernSToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.speichernSToolStripMenuItem.Text = "speichern [S]";
+            this.speichernSToolStripMenuItem.Click += new System.EventHandler(this.speichernSToolStripMenuItem_Click);
+            // 
+            // speichernAlsAToolStripMenuItem
+            // 
+            this.speichernAlsAToolStripMenuItem.Name = "speichernAlsAToolStripMenuItem";
+            this.speichernAlsAToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.speichernAlsAToolStripMenuItem.Text = "speichern als [A]";
+            this.speichernAlsAToolStripMenuItem.Click += new System.EventHandler(this.speichernAlsAToolStripMenuItem_Click);
+            // 
+            // öffnenOToolStripMenuItem
+            // 
+            this.öffnenOToolStripMenuItem.Name = "öffnenOToolStripMenuItem";
+            this.öffnenOToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.öffnenOToolStripMenuItem.Text = "öffnen [O]";
+            this.öffnenOToolStripMenuItem.Click += new System.EventHandler(this.öffnenOToolStripMenuItem_Click);
+            // 
+            // schliessenXToolStripMenuItem
+            // 
+            this.schliessenXToolStripMenuItem.Name = "schliessenXToolStripMenuItem";
+            this.schliessenXToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.schliessenXToolStripMenuItem.Text = "schliessen [X]";
+            this.schliessenXToolStripMenuItem.Click += new System.EventHandler(this.schliessenXToolStripMenuItem_Click);
+            // 
             // themesToolStripMenuItem
             // 
             this.themesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -84,110 +110,53 @@
             this.themesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.themesToolStripMenuItem.Text = "Themes";
             // 
+            // vulcanoToolStripMenuItem
+            // 
+            this.vulcanoToolStripMenuItem.Name = "vulcanoToolStripMenuItem";
+            this.vulcanoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.vulcanoToolStripMenuItem.Text = "Vulcano";
+            // 
+            // aquariumToolStripMenuItem
+            // 
+            this.aquariumToolStripMenuItem.Name = "aquariumToolStripMenuItem";
+            this.aquariumToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.aquariumToolStripMenuItem.Text = "Aquarium";
+            // 
+            // forestToolStripMenuItem
+            // 
+            this.forestToolStripMenuItem.Name = "forestToolStripMenuItem";
+            this.forestToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.forestToolStripMenuItem.Text = "Forest";
+            // 
+            // normalwhiteToolStripMenuItem
+            // 
+            this.normalwhiteToolStripMenuItem.Name = "normalwhiteToolStripMenuItem";
+            this.normalwhiteToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.normalwhiteToolStripMenuItem.Text = "Normal";
+            // 
+            // blindPandaToolStripMenuItem
+            // 
+            this.blindPandaToolStripMenuItem.Name = "blindPandaToolStripMenuItem";
+            this.blindPandaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.blindPandaToolStripMenuItem.Text = "Blind Panda";
+            // 
+            // helloKittyToolStripMenuItem
+            // 
+            this.helloKittyToolStripMenuItem.Name = "helloKittyToolStripMenuItem";
+            this.helloKittyToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.helloKittyToolStripMenuItem.Text = "Hello Kitty";
+            // 
             // hilfeToolStripMenuItem
             // 
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.hilfeToolStripMenuItem.Text = "Hilfe";
             // 
-            // speichernSToolStripMenuItem
-            // 
-            this.speichernSToolStripMenuItem.Name = "speichernSToolStripMenuItem";
-            this.speichernSToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.speichernSToolStripMenuItem.Text = "speichern [S]";
-            // 
-            // öffnenOToolStripMenuItem
-            // 
-            this.öffnenOToolStripMenuItem.Name = "öffnenOToolStripMenuItem";
-            this.öffnenOToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.öffnenOToolStripMenuItem.Text = "öffnen [O]";
-            // 
-            // schliessenXToolStripMenuItem
-            // 
-            this.schliessenXToolStripMenuItem.Name = "schliessenXToolStripMenuItem";
-            this.schliessenXToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.schliessenXToolStripMenuItem.Text = "schliessen [X]";
-            // 
-            // speichernAlsAToolStripMenuItem
-            // 
-            this.speichernAlsAToolStripMenuItem.Name = "speichernAlsAToolStripMenuItem";
-            this.speichernAlsAToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.speichernAlsAToolStripMenuItem.Text = "speichern als [A]";
-            // 
-            // vulcanoToolStripMenuItem
-            // 
-            this.vulcanoToolStripMenuItem.Name = "vulcanoToolStripMenuItem";
-            this.vulcanoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.vulcanoToolStripMenuItem.Text = "Vulcano";
-            // 
-            // aquariumToolStripMenuItem
-            // 
-            this.aquariumToolStripMenuItem.Name = "aquariumToolStripMenuItem";
-            this.aquariumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aquariumToolStripMenuItem.Text = "Aquarium";
-            // 
-            // forestToolStripMenuItem
-            // 
-            this.forestToolStripMenuItem.Name = "forestToolStripMenuItem";
-            this.forestToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.forestToolStripMenuItem.Text = "Forest";
-            // 
-            // normalwhiteToolStripMenuItem
-            // 
-            this.normalwhiteToolStripMenuItem.Name = "normalwhiteToolStripMenuItem";
-            this.normalwhiteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.normalwhiteToolStripMenuItem.Text = "Normal";
-            // 
-            // blindPandaToolStripMenuItem
-            // 
-            this.blindPandaToolStripMenuItem.Name = "blindPandaToolStripMenuItem";
-            this.blindPandaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.blindPandaToolStripMenuItem.Text = "Blind Panda";
-            // 
-            // helloKittyToolStripMenuItem
-            // 
-            this.helloKittyToolStripMenuItem.Name = "helloKittyToolStripMenuItem";
-            this.helloKittyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.helloKittyToolStripMenuItem.Text = "Hello Kitty";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(29, 47);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(29, 84);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(29, 121);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 388);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -215,9 +184,7 @@
         private System.Windows.Forms.ToolStripMenuItem blindPandaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helloKittyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 

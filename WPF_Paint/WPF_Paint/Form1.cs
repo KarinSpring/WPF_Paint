@@ -16,5 +16,25 @@ namespace WPF_Paint
         {
             InitializeComponent();
         }
+
+        private void speichernSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Save File in a default folder (Show in MessageBox)
+        }
+
+        private void speichernAlsAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Save File in a custom folder (Show in MessageBox)
+        }
+
+        private void öffnenOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Open a existing project
+        }
+
+        private void schliessenXToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Close the current project with MessageBox warning for saving
+        }
     }
 }
