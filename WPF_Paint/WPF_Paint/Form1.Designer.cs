@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.speichernSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.speichernAlsAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.öffnenOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.schliessenXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SpeichernMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.SpeichernAlsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.OeffnenMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.SchliessenMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vulcanoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aquariumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +44,7 @@
             this.helloKittyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,41 +63,41 @@
             // dateiToolStripMenuItem
             // 
             this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.speichernSToolStripMenuItem,
-            this.speichernAlsAToolStripMenuItem,
-            this.öffnenOToolStripMenuItem,
-            this.schliessenXToolStripMenuItem});
+            this.SpeichernMenu,
+            this.SpeichernAlsMenu,
+            this.OeffnenMenu,
+            this.SchliessenMenu});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
             this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
             // 
-            // speichernSToolStripMenuItem
+            // SpeichernMenu
             // 
-            this.speichernSToolStripMenuItem.Name = "speichernSToolStripMenuItem";
-            this.speichernSToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.speichernSToolStripMenuItem.Text = "speichern [S]";
-            this.speichernSToolStripMenuItem.Click += new System.EventHandler(this.speichernSToolStripMenuItem_Click);
+            this.SpeichernMenu.Name = "SpeichernMenu";
+            this.SpeichernMenu.Size = new System.Drawing.Size(161, 22);
+            this.SpeichernMenu.Text = "speichern [S]";
+            this.SpeichernMenu.Click += new System.EventHandler(this.SpeichernSToolStripMenuItem_Click);
             // 
-            // speichernAlsAToolStripMenuItem
+            // SpeichernAlsMenu
             // 
-            this.speichernAlsAToolStripMenuItem.Name = "speichernAlsAToolStripMenuItem";
-            this.speichernAlsAToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.speichernAlsAToolStripMenuItem.Text = "speichern als [A]";
-            this.speichernAlsAToolStripMenuItem.Click += new System.EventHandler(this.speichernAlsAToolStripMenuItem_Click);
+            this.SpeichernAlsMenu.Name = "SpeichernAlsMenu";
+            this.SpeichernAlsMenu.Size = new System.Drawing.Size(161, 22);
+            this.SpeichernAlsMenu.Text = "speichern als [A]";
+            this.SpeichernAlsMenu.Click += new System.EventHandler(this.SpeichernAlsAToolStripMenuItem_Click);
             // 
-            // öffnenOToolStripMenuItem
+            // OeffnenMenu
             // 
-            this.öffnenOToolStripMenuItem.Name = "öffnenOToolStripMenuItem";
-            this.öffnenOToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.öffnenOToolStripMenuItem.Text = "öffnen [O]";
-            this.öffnenOToolStripMenuItem.Click += new System.EventHandler(this.öffnenOToolStripMenuItem_Click);
+            this.OeffnenMenu.Name = "OeffnenMenu";
+            this.OeffnenMenu.Size = new System.Drawing.Size(161, 22);
+            this.OeffnenMenu.Text = "öffnen [O]";
+            this.OeffnenMenu.Click += new System.EventHandler(this.OeffnenOToolStripMenuItem_Click);
             // 
-            // schliessenXToolStripMenuItem
+            // SchliessenMenu
             // 
-            this.schliessenXToolStripMenuItem.Name = "schliessenXToolStripMenuItem";
-            this.schliessenXToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.schliessenXToolStripMenuItem.Text = "schliessen [X]";
-            this.schliessenXToolStripMenuItem.Click += new System.EventHandler(this.schliessenXToolStripMenuItem_Click);
+            this.SchliessenMenu.Name = "SchliessenMenu";
+            this.SchliessenMenu.Size = new System.Drawing.Size(161, 22);
+            this.SchliessenMenu.Text = "schliessen [X]";
+            this.SchliessenMenu.Click += new System.EventHandler(this.SchliessenXToolStripMenuItem_Click);
             // 
             // themesToolStripMenuItem
             // 
@@ -172,10 +174,10 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem speichernSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem speichernAlsAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem öffnenOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem schliessenXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SpeichernMenu;
+        private System.Windows.Forms.ToolStripMenuItem SpeichernAlsMenu;
+        private System.Windows.Forms.ToolStripMenuItem OeffnenMenu;
+        private System.Windows.Forms.ToolStripMenuItem SchliessenMenu;
         private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vulcanoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aquariumToolStripMenuItem;
@@ -185,6 +187,7 @@
         private System.Windows.Forms.ToolStripMenuItem helloKittyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
