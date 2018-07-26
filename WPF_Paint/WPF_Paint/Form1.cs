@@ -52,7 +52,12 @@ namespace WPF_Paint
 
         }
 
-        //Ausgelagerte Methoden
+
+
+
+        /*
+         * Ausgelagerte Methoden
+         */
 
         //used in Speichern (Default) and Schliessen (Default save)
         public void SavingMethod()
@@ -67,5 +72,7 @@ namespace WPF_Paint
             MessageBox.Show("Bild wurde in " + Path + " gespeichert.");
             this.Close();
         }
+
+
     }
 }
