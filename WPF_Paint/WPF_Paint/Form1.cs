@@ -1,22 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WPF_Paint
 {
     public partial class Form1 : Form
     {
+        /*
+         * Some code is used from source 
+         * website: https://www.codeproject.com/Tips/811495/Simple-Paint-Application-in-Csharp
+         */
+
         public Form1()
         {
             InitializeComponent();
+            g = PnlDraw.CreateGraphics();
         }
+
+        bool startPaint = false;
+        Graphics g;
+        int? initX = null;
+        int? initY = null;
+        bool drawSquare = false;
+        bool drawRectangle = false;
+        bool drawCircle = false;
 
         /*
         * Ausgelagerte Methoden
@@ -35,6 +43,8 @@ namespace WPF_Paint
             MessageBox.Show("Bild wurde in " + Path + " gespeichert.");
             this.Close();
         }
+
+
 
         /*
          * Menu "Datei"
@@ -93,7 +103,7 @@ namespace WPF_Paint
             button8.BackColor = Color.White;
             button9.BackColor = Color.Black;
 
-            //Changes Activity of Theme to Bold and add "(aktiv)*
+            //Changes Activity of Theme add "(aktiv)* and to Bold 
             NormalMenu.Text = NormalMenu.Text + " (aktiv)";
             NormalMenu.Font = new Font(NormalMenu.Font, FontStyle.Bold);
         }
