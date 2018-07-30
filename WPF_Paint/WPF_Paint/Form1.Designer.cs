@@ -30,18 +30,18 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SpeichernMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.SpeichernAlsMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.OeffnenMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.SchliessenMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveAsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.CloseMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.themesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vulcanoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aquariumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.forestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.normalwhiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blindPandaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helloKittyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NormalMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.VulcanoMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.AquariumMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.ForrestMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.BlindMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.KittyMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.PnlColor = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -56,8 +56,10 @@
             this.LblColor = new System.Windows.Forms.Label();
             this.PnlDraw = new System.Windows.Forms.Panel();
             this.PnlShape = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.LblShape = new System.Windows.Forms.Label();
+            this.DarculaMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.PnlColor.SuspendLayout();
             this.PnlShape.SuspendLayout();
@@ -68,106 +70,108 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dateiToolStripMenuItem,
             this.themesToolStripMenuItem,
-            this.hilfeToolStripMenuItem});
+            this.HelpMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(810, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(812, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // dateiToolStripMenuItem
             // 
             this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SpeichernMenu,
-            this.SpeichernAlsMenu,
-            this.OeffnenMenu,
-            this.SchliessenMenu});
+            this.SaveMenu,
+            this.SaveAsMenu,
+            this.OpenMenu,
+            this.CloseMenu});
             this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
             this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.dateiToolStripMenuItem.Text = "Datei";
             // 
-            // SpeichernMenu
+            // SaveMenu
             // 
-            this.SpeichernMenu.Name = "SpeichernMenu";
-            this.SpeichernMenu.Size = new System.Drawing.Size(161, 22);
-            this.SpeichernMenu.Text = "speichern [S]";
-            this.SpeichernMenu.Click += new System.EventHandler(this.SpeichernSToolStripMenuItem_Click);
+            this.SaveMenu.Name = "SaveMenu";
+            this.SaveMenu.Size = new System.Drawing.Size(161, 22);
+            this.SaveMenu.Text = "speichern [S]";
+            this.SaveMenu.Click += new System.EventHandler(this.SaveMenu_Click);
             // 
-            // SpeichernAlsMenu
+            // SaveAsMenu
             // 
-            this.SpeichernAlsMenu.Name = "SpeichernAlsMenu";
-            this.SpeichernAlsMenu.Size = new System.Drawing.Size(161, 22);
-            this.SpeichernAlsMenu.Text = "speichern als [A]";
-            this.SpeichernAlsMenu.Click += new System.EventHandler(this.SpeichernAlsAToolStripMenuItem_Click);
+            this.SaveAsMenu.Name = "SaveAsMenu";
+            this.SaveAsMenu.Size = new System.Drawing.Size(161, 22);
+            this.SaveAsMenu.Text = "speichern als [A]";
+            this.SaveAsMenu.Click += new System.EventHandler(this.SaveAsMenu_Click);
             // 
-            // OeffnenMenu
+            // OpenMenu
             // 
-            this.OeffnenMenu.Name = "OeffnenMenu";
-            this.OeffnenMenu.Size = new System.Drawing.Size(161, 22);
-            this.OeffnenMenu.Text = "öffnen [O]";
-            this.OeffnenMenu.Click += new System.EventHandler(this.OeffnenOToolStripMenuItem_Click);
+            this.OpenMenu.Name = "OpenMenu";
+            this.OpenMenu.Size = new System.Drawing.Size(161, 22);
+            this.OpenMenu.Text = "öffnen [O]";
+            this.OpenMenu.Click += new System.EventHandler(this.OpenMenu_Click);
             // 
-            // SchliessenMenu
+            // CloseMenu
             // 
-            this.SchliessenMenu.Name = "SchliessenMenu";
-            this.SchliessenMenu.Size = new System.Drawing.Size(161, 22);
-            this.SchliessenMenu.Text = "schliessen [X]";
-            this.SchliessenMenu.Click += new System.EventHandler(this.SchliessenXToolStripMenuItem_Click);
+            this.CloseMenu.Name = "CloseMenu";
+            this.CloseMenu.Size = new System.Drawing.Size(161, 22);
+            this.CloseMenu.Text = "schliessen [X]";
+            this.CloseMenu.Click += new System.EventHandler(this.CloseMenu_Click);
             // 
             // themesToolStripMenuItem
             // 
             this.themesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vulcanoToolStripMenuItem,
-            this.aquariumToolStripMenuItem,
-            this.forestToolStripMenuItem,
-            this.normalwhiteToolStripMenuItem,
-            this.blindPandaToolStripMenuItem,
-            this.helloKittyToolStripMenuItem});
+            this.NormalMenu,
+            this.DarculaMenu,
+            this.VulcanoMenu,
+            this.AquariumMenu,
+            this.ForrestMenu,
+            this.BlindMenu,
+            this.KittyMenu});
             this.themesToolStripMenuItem.Name = "themesToolStripMenuItem";
             this.themesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.themesToolStripMenuItem.Text = "Themes";
             // 
-            // vulcanoToolStripMenuItem
+            // NormalMenu
             // 
-            this.vulcanoToolStripMenuItem.Name = "vulcanoToolStripMenuItem";
-            this.vulcanoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.vulcanoToolStripMenuItem.Text = "Vulcano";
+            this.NormalMenu.Name = "NormalMenu";
+            this.NormalMenu.Size = new System.Drawing.Size(152, 22);
+            this.NormalMenu.Text = "Normal";
+            this.NormalMenu.Click += new System.EventHandler(this.NormalMenu_Click);
             // 
-            // aquariumToolStripMenuItem
+            // VulcanoMenu
             // 
-            this.aquariumToolStripMenuItem.Name = "aquariumToolStripMenuItem";
-            this.aquariumToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.aquariumToolStripMenuItem.Text = "Aquarium";
+            this.VulcanoMenu.Name = "VulcanoMenu";
+            this.VulcanoMenu.Size = new System.Drawing.Size(152, 22);
+            this.VulcanoMenu.Text = "Vulcano";
             // 
-            // forestToolStripMenuItem
+            // AquariumMenu
             // 
-            this.forestToolStripMenuItem.Name = "forestToolStripMenuItem";
-            this.forestToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.forestToolStripMenuItem.Text = "Forest";
+            this.AquariumMenu.Name = "AquariumMenu";
+            this.AquariumMenu.Size = new System.Drawing.Size(152, 22);
+            this.AquariumMenu.Text = "Aquarium";
             // 
-            // normalwhiteToolStripMenuItem
+            // ForrestMenu
             // 
-            this.normalwhiteToolStripMenuItem.Name = "normalwhiteToolStripMenuItem";
-            this.normalwhiteToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.normalwhiteToolStripMenuItem.Text = "Normal";
+            this.ForrestMenu.Name = "ForrestMenu";
+            this.ForrestMenu.Size = new System.Drawing.Size(152, 22);
+            this.ForrestMenu.Text = "Forrest";
             // 
-            // blindPandaToolStripMenuItem
+            // BlindMenu
             // 
-            this.blindPandaToolStripMenuItem.Name = "blindPandaToolStripMenuItem";
-            this.blindPandaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.blindPandaToolStripMenuItem.Text = "Blind Panda";
+            this.BlindMenu.Name = "BlindMenu";
+            this.BlindMenu.Size = new System.Drawing.Size(152, 22);
+            this.BlindMenu.Text = "Blind Panda";
             // 
-            // helloKittyToolStripMenuItem
+            // KittyMenu
             // 
-            this.helloKittyToolStripMenuItem.Name = "helloKittyToolStripMenuItem";
-            this.helloKittyToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.helloKittyToolStripMenuItem.Text = "Hello Kitty";
+            this.KittyMenu.Name = "KittyMenu";
+            this.KittyMenu.Size = new System.Drawing.Size(152, 22);
+            this.KittyMenu.Text = "Hello Kitty";
             // 
-            // hilfeToolStripMenuItem
+            // HelpMenu
             // 
-            this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
-            this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.hilfeToolStripMenuItem.Text = "Hilfe";
+            this.HelpMenu.Name = "HelpMenu";
+            this.HelpMenu.Size = new System.Drawing.Size(44, 20);
+            this.HelpMenu.Text = "Hilfe";
             // 
             // PnlColor
             // 
@@ -192,8 +196,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(35, 35);
             this.button9.TabIndex = 13;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -201,8 +204,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(35, 35);
             this.button8.TabIndex = 12;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -210,8 +212,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(35, 35);
             this.button7.TabIndex = 11;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -219,8 +220,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(35, 35);
             this.button6.TabIndex = 10;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -228,8 +228,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(35, 35);
             this.button5.TabIndex = 9;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -237,8 +236,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(35, 35);
             this.button4.TabIndex = 8;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -246,8 +244,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(35, 35);
             this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -255,8 +252,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(35, 35);
             this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -264,8 +260,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(35, 35);
             this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // LblColor
             // 
@@ -278,19 +273,32 @@
             // 
             // PnlDraw
             // 
-            this.PnlDraw.Location = new System.Drawing.Point(162, 34);
+            this.PnlDraw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlDraw.Location = new System.Drawing.Point(181, 34);
             this.PnlDraw.Name = "PnlDraw";
-            this.PnlDraw.Size = new System.Drawing.Size(636, 394);
+            this.PnlDraw.Size = new System.Drawing.Size(617, 394);
             this.PnlDraw.TabIndex = 3;
             // 
             // PnlShape
             // 
+            this.PnlShape.Controls.Add(this.button10);
             this.PnlShape.Controls.Add(this.comboBox1);
             this.PnlShape.Controls.Add(this.LblShape);
             this.PnlShape.Location = new System.Drawing.Point(12, 254);
             this.PnlShape.Name = "PnlShape";
             this.PnlShape.Size = new System.Drawing.Size(142, 126);
             this.PnlShape.TabIndex = 2;
+            // 
+            // button10
+            // 
+            this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button10.Image = global::WPF_Paint.Properties.Resources.radiergummi2;
+            this.button10.Location = new System.Drawing.Point(6, 71);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(61, 52);
+            this.button10.TabIndex = 14;
+            this.button10.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
@@ -314,11 +322,17 @@
             this.LblShape.TabIndex = 5;
             this.LblShape.Text = "Aktueller Pinsel:";
             // 
+            // DarculaMenu
+            // 
+            this.DarculaMenu.Name = "DarculaMenu";
+            this.DarculaMenu.Size = new System.Drawing.Size(152, 22);
+            this.DarculaMenu.Text = "Darcula";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 438);
+            this.ClientSize = new System.Drawing.Size(812, 438);
             this.Controls.Add(this.PnlShape);
             this.Controls.Add(this.PnlDraw);
             this.Controls.Add(this.PnlColor);
@@ -341,18 +355,18 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem SpeichernMenu;
-        private System.Windows.Forms.ToolStripMenuItem SpeichernAlsMenu;
-        private System.Windows.Forms.ToolStripMenuItem OeffnenMenu;
-        private System.Windows.Forms.ToolStripMenuItem SchliessenMenu;
+        private System.Windows.Forms.ToolStripMenuItem SaveMenu;
+        private System.Windows.Forms.ToolStripMenuItem SaveAsMenu;
+        private System.Windows.Forms.ToolStripMenuItem OpenMenu;
+        private System.Windows.Forms.ToolStripMenuItem CloseMenu;
         private System.Windows.Forms.ToolStripMenuItem themesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vulcanoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aquariumToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem forestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem normalwhiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem blindPandaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helloKittyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hilfeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem VulcanoMenu;
+        private System.Windows.Forms.ToolStripMenuItem AquariumMenu;
+        private System.Windows.Forms.ToolStripMenuItem ForrestMenu;
+        private System.Windows.Forms.ToolStripMenuItem NormalMenu;
+        private System.Windows.Forms.ToolStripMenuItem BlindMenu;
+        private System.Windows.Forms.ToolStripMenuItem KittyMenu;
+        private System.Windows.Forms.ToolStripMenuItem HelpMenu;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Panel PnlColor;
         private System.Windows.Forms.Panel PnlDraw;
@@ -369,6 +383,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label LblColor;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ToolStripMenuItem DarculaMenu;
     }
 }
 

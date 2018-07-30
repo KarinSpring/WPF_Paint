@@ -18,23 +18,45 @@ namespace WPF_Paint
             InitializeComponent();
         }
 
-        private void SpeichernSToolStripMenuItem_Click(object sender, EventArgs e)
+        /*
+        * Ausgelagerte Methoden
+        */
+
+        //used in Speichern (Default) and Schliessen (Default save)
+        public void SavingMethod()
+        {
+            string fileName = string.Format("{0}.txt", DateTime.Now.ToString("yyyyMMddhhmm"));
+            string Path = @"C:\Users\karin.spring\source\repos\WPF_Paint\testfiles\" + fileName;
+
+            using (StreamWriter sw = new StreamWriter(Path))
+            {
+                sw.WriteLine("Testfile");
+            }
+            MessageBox.Show("Bild wurde in " + Path + " gespeichert.");
+            this.Close();
+        }
+
+        /*
+         * Menu "Datei"
+         */
+
+        private void SaveMenu_Click(object sender, EventArgs e)
         {
             //Save File in a default folder (Show in MessageBox)
             SavingMethod();
         }
 
-        private void SpeichernAlsAToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveAsMenu_Click(object sender, EventArgs e)
         {
             //Save File in a custom folder (Show in MessageBox)
         }
 
-        private void OeffnenOToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenMenu_Click(object sender, EventArgs e)
         {
             //Open a existing project
         }
 
-        private void SchliessenXToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CloseMenu_Click(object sender, EventArgs e)
         {
             //Messagebox for warning
             DialogResult dialogResult = MessageBox.Show("Ohne Speichern beenden?", "Achtung!", MessageBoxButtons.YesNo);
@@ -53,25 +75,31 @@ namespace WPF_Paint
         }
 
 
-
-
         /*
-         * Ausgelagerte Methoden
+         * Change Themes
          */
 
-        //used in Speichern (Default) and Schliessen (Default save)
-        public void SavingMethod()
+        //Theme "Normal" is activated
+        private void NormalMenu_Click(object sender, EventArgs e)
         {
-            string fileName = string.Format("{0}.txt", DateTime.Now.ToString("yyyyMMddhhmm"));
-            string Path = @"C:\Users\karin.spring\source\repos\WPF_Paint\testfiles\" + fileName;
+            //Chances Colors
+            button1.BackColor = Color.Red;
+            button2.BackColor = Color.DarkOrange;
+            button3.BackColor = Color.Yellow;
+            button4.BackColor = Color.Lime;
+            button5.BackColor = Color.Aqua;
+            button6.BackColor = Color.Blue;
+            button7.BackColor = Color.DarkOrchid;
+            button8.BackColor = Color.White;
+            button9.BackColor = Color.Black;
 
-            using (StreamWriter sw = new StreamWriter(Path))
-            {
-                sw.WriteLine("Testfile");
-            }
-            MessageBox.Show("Bild wurde in " + Path + " gespeichert.");
-            this.Close();
+            //Changes Activity of Theme to Bold and add "(aktiv)*
+            NormalMenu.Text = NormalMenu.Text + " (aktiv)";
+            NormalMenu.Font = new Font(NormalMenu.Font, FontStyle.Bold);
         }
+
+
+
 
 
     }
